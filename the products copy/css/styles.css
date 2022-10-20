@@ -1,0 +1,189 @@
+/*För att sätta ut en font, och storlek på texten och ge ne backgroundsfärg*/
+* {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+    background-color: lightgray;
+}
+/* För att ge ut flexbox till dom sakerna jag vill utan att råka förstöra koden*/
+.container {
+    display: flex;
+}
+/* För att ge en bra storlek på navbarens länkar i felxbox */
+.item {
+    width: 24%;
+    height: 50px;
+}
+/* För att göra en mindre box i navbaren, på ett snabbt att ändra klasen från item. */
+.item2 {
+    width: 4%;
+    height: 50px;
+}
+/* För att hjälpa donera på vilken sidan man är på, på navbaren*/
+.SiteOn {
+   background-color: slategray;
+}
+/* För att skapa en navbar, och ge den deras utseende*/
+nav {
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row; 
+    border: 1px solid black;
+    width: 100%;
+    position: fixed;
+    z-index: 900;
+    top: 0px; 
+    left: 0px;
+    right: 0px;
+}
+/* För att ge länkarna deras utssende */
+a {
+    color: black;
+    background-color: lightslategray;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px 0;
+}
+/* För att göra så att länkar ändras när man har muser över*/
+a:hover {
+    background-color: slategray;
+}
+/* Föra att göra kundvagnens bild, så att den passar i boxen den är i*/
+span {
+    border: 1px solid black;
+    content: url(/images/shopping-cart.png);
+    height: 50px;
+    width: 58px;
+}
+/* För att göra så att allt går ner lite så att Navbaren inte täcker något.*/
+.NavbarOffset {
+    top: 100px;
+}
+/* För att skapa en bra rubrik / title till varhe sida*/
+.Title {
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    bottom: 30px;
+}
+/* För att sätta i titln på contacts sidan så att edet passar med det andra formatet*/
+.Title2 {
+    width: 40%;
+    top: 30px;
+}
+/* Föra att ändra h1 texten inom titel elementet*/
+.Title h1 {
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 2% 2%;
+}
+/*För att ändra texten i den andra titelns text*/
+.Title2 h1 {
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 2% 2%;
+}
+/* används som container för flexboxen för produkterna,  */
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* fsanns en tre men den gjorde samma sak som tvåan så jag tog bort den, används till fleboxen i contacts */
+.container4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* Gör så texten i contanier4 har en större storlek.*/
+.container4 p {
+    font-size: 24px;
+}
+
+/*För att göra så att bilderna ser abra ut*/
+img {
+    background: darkslategray;
+    border: 1px solid black;
+    height: 200px;
+    width: 250px;
+    align-self: center;
+    margin: 30px;
+}
+/* används för att få bilden i contacts att se bra ut*/
+.Placeholder2 {
+    background-color: darkslategrey;
+    border: 1px solid black;
+    height: 450px;
+    width: 21%;
+    align-self: flex-start;
+    margin: 50px;
+}
+/* föra att göra etxten i about sidan*/
+.Text {
+    text-align: center;
+    margin: 0 10%;
+    padding-bottom: 5px;
+}
+/* För att skpa utseendet och plaserandet av fottern*/
+footer {
+    bottom: 0px;
+    border: 1px solid black;
+    left: 0px;
+    background-color: slategray;
+    margin-top: 100px;
+}
+/* Flr texten av footern*/
+footer p {
+    background-color: slategray;
+    margin: 10px 10%;
+}
+/* För att ge en klass till bilderna som inte gör något, för jag visste inte hur jag skulle göra overlayen utan den */
+.Image {
+    clear: none;
+}
+/* För att skapa overlayen som kommer när man pekar på bilder.*/
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    opacity: 0.9;
+  }
+    /* gör så att overlayen kommer fram när man pekar på bilder*/
+  .Image:hover .overlay {
+      height: 100%;
+      width: 100%;
+  }
+  /* För att göra texten på overlyen*/
+  .overlayText {
+      white-space: nowrap;
+      font-size: 18px;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  }
+/* Föra att skapa ett annat utseende till länken i footern*/
+footer a {
+    color: black;
+    background-color: slategray;
+    text-decoration: none;
+    border: 0px solid black;
+    padding:0;
+    flex-wrap: nowrap;
+}
+/*För att ge länken i footern en hover effect*/
+footer a:hover {
+    background-color: slategray;
+    color:indigo;
+}
